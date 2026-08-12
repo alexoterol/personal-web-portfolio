@@ -1,9 +1,10 @@
 const serviceId = 'service_a12gpbs';
 const templateId = 'template_nmzglff';
-const apikey = 'sDziwdQK5i8m2E_Aw';
+// EmailJS public key: safe to ship client-side by design, but only if
+// "Allowed origins" is locked to this domain in the EmailJS dashboard.
+const publicKey = 'sDziwdQK5i8m2E_Aw';
 
-// Inicializar emailjs una sola vez
-emailjs.init(apikey);
+emailjs.init(publicKey);
 
 const frmEmail = document.getElementById('contactForm');
 frmEmail.addEventListener('submit', (event) => {
@@ -41,7 +42,7 @@ function validateForm() {
 
 function sendEmail() {
     emailjs
-        .sendForm(serviceId, templateId, frmEmail, apikey)
+        .sendForm(serviceId, templateId, frmEmail, publicKey)
         .then((result) => {
             Swal.fire('Your message has been sent successfully.');
         })
