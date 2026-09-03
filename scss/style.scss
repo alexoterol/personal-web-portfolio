@@ -1,6 +1,6 @@
 /******* Bootstrap Theming ********/
 
-$primary: #0BCEAF;
+$primary: #7e6dcb;
 $secondary: #6c757d;
 $light: #ffffff;
 $dark: #343a40;
@@ -304,4 +304,80 @@ h6,
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+/* Skill logo marquees (kept in sync with css/style.css) */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide_back {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: $light;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), $light);
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), $light);
+}
+
+.logos:hover .logos-slide,
+.logos:hover .logos-slide-back {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.logos-slide-back {
+    display: inline-block;
+    direction: ltr;
+    animation: 35s slide_back infinite linear;
+}
+
+.logos-slide img,
+.logos-slide-back img {
+    height: 150px;
+    margin: 0 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logos-slide,
+    .logos-slide-back {
+        animation: none;
+    }
 }

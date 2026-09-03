@@ -10007,7 +10007,7 @@ h6,
 .logos {
   overflow: hidden;
   padding: 60px 0;
-  background: white;
+  background: #ffffff;
   white-space: nowrap;
   position: relative;
 }
@@ -10024,15 +10024,16 @@ h6,
 
 .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
 }
 
 .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
 }
 
-.logos:hover .logos-slide {
+.logos:hover .logos-slide,
+.logos:hover .logos-slide-back {
   animation-play-state: paused;
 }
 
@@ -10041,23 +10042,21 @@ h6,
   animation: 35s slide infinite linear;
 }
 
-.logos-slide img {
-  height: 150px;
-  margin: 0 20px;
-}
-
-.logos:hover .logos-slide-back {
-  animation-play-state: paused;
-}
-
 .logos-slide-back {
   display: inline-block;
-  
   direction: ltr;
   animation: 35s slide_back infinite linear;
 }
 
+.logos-slide img,
 .logos-slide-back img {
   height: 150px;
   margin: 0 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logos-slide,
+  .logos-slide-back {
+    animation: none;
+  }
 }

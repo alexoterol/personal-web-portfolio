@@ -4,17 +4,19 @@
 <head>
     <meta charset="utf-8">
     <title>Alex Otero - Portfolio</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Portfolio Alex Otero" name="keywords">
-    <meta content="Portfolio Alex Otero" name="description">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' code.jquery.com stackpath.bootstrapcdn.com cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com; font-src 'self' fonts.gstatic.com cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' api.emailjs.com; frame-src www.youtube.com; base-uri 'self'; form-action 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alex Otero Limones">
+    <meta name="keywords" content="Alex Otero, portfolio, computer engineer, web developer, software design">
+    <meta name="description" content="Portfolio of Alex Otero Limones, computer engineering student and web developer: projects, skills and experience.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; script-src 'self' code.jquery.com stackpath.bootstrapcdn.com cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com; font-src 'self' fonts.gstatic.com cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' api.emailjs.com; frame-src https://www.youtube.com; base-uri 'self'; form-action 'self'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -22,7 +24,6 @@
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -32,9 +33,10 @@
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
-            <h1 class="m-0 display-5"><span class="text-primary">Alex</span>Otero</h1>
+            <span class="h1 m-0 font-weight-bolder"><span class="text-primary">Alex</span>Otero</span>
         </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
@@ -64,7 +66,8 @@
                     </button>        
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item" src="" id="video" title="Presentation video"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -73,17 +76,20 @@
     <!-- Video Modal End -->
 
 
+    <main>
+
     <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+    <section class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.png" alt="">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.png"
+                        alt="Portrait of Alex Otero Limones">
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
                     <h3 class="text-white font-weight-normal mb-3">I'm</h3>
                     <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Alex Otero Limones</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <h2 class="typed-text-output h1 d-inline font-weight-lighter text-white"></h2>
                     <div class="typed-text d-none">Computer Engineer, Web Designer, Web Developer, Software Designer, Graphic Designer</div>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                         <a href="img/alex-otero-cv.pdf" class="btn btn-outline-light mr-5" target="_blank" rel="noopener noreferrer">Download CV</a>
@@ -97,20 +103,21 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Header End -->
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
+    <section class="container-fluid py-5" id="about">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+                <h2 class="display-1 text-uppercase text-white font-weight-bolder" aria-hidden="true" style="-webkit-text-stroke: 1px #dee2e6;">About</h2>
+                <h2 class="h1 position-absolute text-uppercase text-primary font-weight-bolder">About Me</h2>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/about.png" alt="">
+                    <img class="img-fluid rounded w-100" src="img/about.png" loading="lazy"
+                        alt="Alex Otero Limones working at a desk">
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">Web Developer & Software Designer</h3>
@@ -126,125 +133,131 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- About End -->
 
 
     <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
+    <section class="container-fluid pt-5 pb-3" id="portfolio">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">PROYECTS</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+                <h2 class="display-1 text-uppercase text-white font-weight-bolder" aria-hidden="true" style="-webkit-text-stroke: 1px #dee2e6;">PROJECTS</h2>
+                <h2 class="h1 position-absolute text-uppercase text-primary font-weight-bolder">My Portfolio</h2>
             </div>
             <div class="row">
                 <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".software-design">Software Design</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".web-dev">Web Development</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".db-system">Data-Base System</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".AI-system">AI</li>
-                    </ul>
+                    <div class="mb-4" id="portfolio-flters" role="group" aria-label="Filter projects by category">
+                        <button type="button" class="btn btn-sm btn-outline-primary m-1 active" data-filter="*" aria-pressed="true">All</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary m-1" data-filter=".software-design" aria-pressed="false">Software Design</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary m-1" data-filter=".web-dev" aria-pressed="false">Web Development</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary m-1" data-filter=".db-system" aria-pressed="false">Database System</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary m-1" data-filter=".AI-system" aria-pressed="false">AI</button>
+                    </div>
                 </div>
             </div>
             <div class="row portfolio-container">
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item software-design ">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/20questions.png" alt="20 Questions">
+                        <img class="img-fluid rounded w-100" loading="lazy" src="img/20questions.png" alt="20 Questions">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/stikrobinson/Proyecto_Grupo_12/tree/main/ProyectoEstructuras2" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="https://github.com/stikrobinson/Proyecto_Grupo_12/tree/main/ProyectoEstructuras2" target="_blank" rel="noopener noreferrer"
+                                aria-label="View the 20 Questions project on GitHub">
+                                <i class="fa fa-plus text-white" aria-hidden="true" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-dev AI-system">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/ArrythmiaDev.png" alt="Arrhythmia Detector with AI">
+                        <img class="img-fluid rounded w-100" loading="lazy" src="img/ArrythmiaDev.png" alt="Arrhythmia Detector with AI">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/Taws-Espol/arrhythmia-detection" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="https://github.com/Taws-Espol/arrhythmia-detection" target="_blank" rel="noopener noreferrer"
+                                aria-label="View the Arrhythmia Detector with AI project on GitHub">
+                                <i class="fa fa-plus text-white" aria-hidden="true" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item db-system AI-system">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/SudokuNN.png" alt="Sudoku with AI">
+                        <img class="img-fluid rounded w-100" loading="lazy" src="img/SudokuNN.png" alt="Sudoku with AI">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/alexoterol/Sudoku" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="https://github.com/alexoterol/Sudoku" target="_blank" rel="noopener noreferrer"
+                                aria-label="View the Sudoku with AI project on GitHub">
+                                <i class="fa fa-plus text-white" aria-hidden="true" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item AI-system">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/Veg-detection.png" alt="Object detection with AI">
+                        <img class="img-fluid rounded w-100" loading="lazy" src="img/Veg-detection.png" alt="Object detection with AI">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/alexoterol/food-detection-model.git" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="https://github.com/alexoterol/food-detection-model.git" target="_blank" rel="noopener noreferrer"
+                                aria-label="View the Object detection with AI project on GitHub">
+                                <i class="fa fa-plus text-white" aria-hidden="true" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item software-design">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/Scrapping-proj.png" alt="Spotify to YouTube Scrapping">
+                        <img class="img-fluid rounded w-100" loading="lazy" src="img/Scrapping-proj.png" alt="Spotify to YouTube Scrapping">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/alexoterol/spotify-youtube-scraping-proyect" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="https://github.com/alexoterol/spotify-youtube-scraping-proyect" target="_blank" rel="noopener noreferrer"
+                                aria-label="View the Spotify to YouTube scraping project on GitHub">
+                                <i class="fa fa-plus text-white" aria-hidden="true" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item db-system sofware-design web-dev">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item db-system software-design web-dev">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/CRUD-proj.png" alt="CRUD project">
+                        <img class="img-fluid rounded w-100" loading="lazy" src="img/CRUD-proj.png" alt="CRUD project">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/alexoterol/expenses-tracker-app" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="https://github.com/alexoterol/expenses-tracker-app" target="_blank" rel="noopener noreferrer"
+                                aria-label="View the CRUD project project on GitHub">
+                                <i class="fa fa-plus text-white" aria-hidden="true" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Portfolio End -->
 
 
     <!-- Skill Start -->
     
-    <div class="container-fluid py-5" id="skill">
+    <section class="container-fluid py-5" id="skill">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+                <h2 class="display-1 text-uppercase text-white font-weight-bolder" aria-hidden="true" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h2>
+                <h2 class="h1 position-absolute text-uppercase text-primary font-weight-bolder">My Skills</h2>
             </div>
             <div class="logos">
                 <div class="logos__container">
                     <div class="logos-slide">
-                        <img src="img/logo-html.png" alt="HTML Logo"/>
-                        <img src="img/logo-css.png" alt="CSS Logo"/>
-                        <img src="img/logo-js.png" alt="Java Script Logo"/>
-                        <img src="img/logo-java.png" alt="Java Logo"/>
-                        <img src="img/logo-python.png" alt="Python Logo"/>
-                        <img src="img/logo-sql.png" alt="SQL Logo"/>
-                        <img src="img/logo-c.png" alt="C Logo"/>
-                        <img src="img/logo-tf.png" alt="TensorFlow Logo"/>
+                        <img src="img/logo-html.png" loading="lazy" alt="HTML logo"/>
+                        <img src="img/logo-css.png" loading="lazy" alt="CSS logo"/>
+                        <img src="img/logo-js.png" loading="lazy" alt="JavaScript logo"/>
+                        <img src="img/logo-java.png" loading="lazy" alt="Java logo"/>
+                        <img src="img/logo-python.png" loading="lazy" alt="Python logo"/>
+                        <img src="img/logo-sql.png" loading="lazy" alt="SQL logo"/>
+                        <img src="img/logo-c.png" loading="lazy" alt="C logo"/>
+                        <img src="img/logo-tf.png" loading="lazy" alt="TensorFlow logo"/>
                     </div>
 
                     <div class="logos-slide" aria-hidden="true">
-                        <img src="img/logo-html.png" alt="HTML Logo"/>
-                        <img src="img/logo-css.png" alt="CSS Logo"/>
-                        <img src="img/logo-js.png" alt="Java Script Logo"/>
-                        <img src="img/logo-java.png" alt="Java Logo"/>
-                        <img src="img/logo-python.png" alt="Python Logo"/>
-                        <img src="img/logo-sql.png" alt="SQL Logo"/>
-                        <img src="img/logo-c.png" alt="C Logo"/>
-                        <img src="img/logo-tf.png" alt="TensorFlow Logo"/>
+                        <img src="img/logo-html.png" loading="lazy" alt="HTML logo"/>
+                        <img src="img/logo-css.png" loading="lazy" alt="CSS logo"/>
+                        <img src="img/logo-js.png" loading="lazy" alt="JavaScript logo"/>
+                        <img src="img/logo-java.png" loading="lazy" alt="Java logo"/>
+                        <img src="img/logo-python.png" loading="lazy" alt="Python logo"/>
+                        <img src="img/logo-sql.png" loading="lazy" alt="SQL logo"/>
+                        <img src="img/logo-c.png" loading="lazy" alt="C logo"/>
+                        <img src="img/logo-tf.png" loading="lazy" alt="TensorFlow logo"/>
                     </div>
                 </div>
             </div>
@@ -252,44 +265,44 @@
             <div class="logos">
                 <div class="logos__container">
                     <div class="logos-slide-back">
-                        <img src="img/logo-pbi.png" alt="Power BI Logo" />
-                        <img src="img/logo-vscode.png" alt="VS Code Logo" />
-                        <img src="img/logo-react.png" alt="React Logo" />
-                        <img src="img/logo-pandas.png" alt="Pandas Logo" />
-                        <img src="img/logo-numpy.png" alt="NumPy Logo" />
-                        <img src="img/logo-scikitlearn.png" alt="Scikit-learn Logo" />
-                        <img src="img/logo-vite.png" alt="Vite Logo" />
-                        <img src="img/logo-nodejs.png" alt="Node.js Logo" />
+                        <img src="img/logo-pbi.png" loading="lazy" alt="Power BI logo" />
+                        <img src="img/logo-vscode.png" loading="lazy" alt="VS Code logo" />
+                        <img src="img/logo-react.png" loading="lazy" alt="React logo" />
+                        <img src="img/logo-pandas.png" loading="lazy" alt="Pandas logo" />
+                        <img src="img/logo-numpy.png" loading="lazy" alt="NumPy logo" />
+                        <img src="img/logo-scikitlearn.png" loading="lazy" alt="Scikit-learn logo" />
+                        <img src="img/logo-vite.png" loading="lazy" alt="Vite logo" />
+                        <img src="img/logo-nodejs.png" loading="lazy" alt="Node.js logo" />
                     </div>
 
                     <div class="logos-slide-back" aria-hidden="true">
-                        <img src="img/logo-pbi.png" alt="" />
-                        <img src="img/logo-vscode.png" alt="" />
-                        <img src="img/logo-react.png" alt="" />
-                        <img src="img/logo-pandas.png" alt="" />
-                        <img src="img/logo-numpy.png" alt="" />
-                        <img src="img/logo-scikitlearn.png" alt="" />
-                        <img src="img/logo-vite.png" alt="" />
-                        <img src="img/logo-nodejs.png" alt="" />
+                        <img src="img/logo-pbi.png" loading="lazy" alt="" />
+                        <img src="img/logo-vscode.png" loading="lazy" alt="" />
+                        <img src="img/logo-react.png" loading="lazy" alt="" />
+                        <img src="img/logo-pandas.png" loading="lazy" alt="" />
+                        <img src="img/logo-numpy.png" loading="lazy" alt="" />
+                        <img src="img/logo-scikitlearn.png" loading="lazy" alt="" />
+                        <img src="img/logo-vite.png" loading="lazy" alt="" />
+                        <img src="img/logo-nodejs.png" loading="lazy" alt="" />
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Skill End -->
 
 
     <!-- Services Start -->
-    <div class="container-fluid pt-5" id="service">
+    <section class="container-fluid pt-5" id="service">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
+                <h2 class="display-1 text-uppercase text-white font-weight-bolder" aria-hidden="true" style="-webkit-text-stroke: 1px #dee2e6;">Service</h2>
+                <h2 class="h1 position-absolute text-uppercase text-primary font-weight-bolder">My Services</h2>
             </div>
             <div class="row pb-3">
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3" aria-hidden="true"></i>
                         <h4 class="font-weight-bold m-0">Web Design</h4>
                     </div>
                     <p>Transform your online presence with stunning, user-friendly web designs tailored to your brand. We create visually engaging, responsive websites that make a lasting impression.</p>
@@ -297,7 +310,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3" aria-hidden="true"></i>
                         <h4 class="font-weight-bold m-0">Web Development</h4>
                     </div>
                     <p>We build fast, scalable websites that offer seamless functionality and a great user experience. Let us bring your ideas to life with cutting-edge technology.</p>
@@ -305,7 +318,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
+                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3" aria-hidden="true"></i>
                         <h4 class="font-weight-bold m-0">Software Design</h4>
                     </div>
                     <p>We design intuitive software solutions that streamline your business processes and enhance user experience, aligning perfectly with your goals.</p>
@@ -313,7 +326,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
+                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3" aria-hidden="true"></i>
                         <h4 class="font-weight-bold m-0">App Design</h4>
                     </div>
                     <p>Elevate your mobile experience with creative, functional app designs. We focus on clean, easy-to-use interfaces that delight users and keep them engaged.</p>
@@ -321,7 +334,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
+                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3" aria-hidden="true"></i>
                         <h4 class="font-weight-bold m-0">Apps Development</h4>
                     </div>
                     <p>Whether it's iOS, Android, or cross-platform, we develop high-performance apps that meet your business needs. From concept to deployment, we ensure your app is ready for success.</p>
@@ -329,7 +342,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
+                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3" aria-hidden="true"></i>
                         <h4 class="font-weight-bold m-0">Marketing</h4>
                     </div>
                     <p>Drive traffic and boost conversions with strategic marketing. We create targeted campaigns that increase your online visibility and help you stand out.</p>
@@ -337,95 +350,95 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Services End -->
 
 
     
 
     <!-- Qualification Start -->
-    <div class="container-fluid py-5" id="qualification">
+    <section class="container-fluid py-5" id="qualification">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+                <h2 class="display-1 text-uppercase text-white font-weight-bolder" aria-hidden="true" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h2>
+                <h2 class="h1 position-absolute text-uppercase text-primary font-weight-bolder">Education &amp; Experience</h2>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h3 class="mb-4">My Education</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Computer Engineering</h5>
                             <p class="mb-2"><strong>ESPOL</strong> | <small>2023 - 2027</small></p>
                             <p>I have a strong foundation in computer engineering, having graduated from ESPOL with a degree in the field.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Professional Driving</h5>
                             <p class="mb-2"><strong>Conduespol</strong> | <small>May - Dic 2025</small></p>
                             <p>Comprehensive background in professional driving and computer engineering, combining technical expertise with strong interpersonal, safety, and analytical skills.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Python Course</h5>
                             <p class="mb-2"><strong>PythonX</strong> | <small>2024</small></p>
                             <p>Completed a Python programming course covering core concepts such as data types, control structures, functions, object-oriented programming, file handling, and best coding practices.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Technical Electrician</h5>
                             <p class="mb-2"><strong>Unidad Educativa Particular Benemérita Sociedad Filantrópica del Guayas</strong> | <small>2017 – 2023</small></p>
                             <p>Strong technical background as an Electrician Technician with excellent academic performance (GPA: 9.4), recognized for outstanding analytical and problem-solving abilities through a Logic Math Competition award and Honor Roll distinction.</p>                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h3 class="mb-4">My Expericence</h3>
+                    <h3 class="mb-4">My Experience</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Internship - Information Security</h5>
                             <p class="mb-2"><strong>Banco Guayaquil</strong> | <small>31 Aug 2026 - Feb 2027</small></p>
                             <p>Supporting the information security team with security monitoring, analysis, and the protection of banking systems and data.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Cultural Intership - Retail Associate</h5>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Cultural Internship - Retail Associate</h5>
                             <p class="mb-2"><strong>Great Wolf Lodge</strong> | <small>27 Feb - 15 May 2026</small></p>
                             <p>Interacted with guests daily in English, assisting with purchases, providing product information, learning retail systems, and ensuring a positive and friendly shopping experience.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Retail Operations</h5>
                             <p class="mb-2"><strong>Nike</strong> | <small>13 Mar - 14 May 2026</small></p>
                             <p>Assisted with retail operations, including inventory management, customer service, and order fulfillment.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Cultural Intership - Resort Worker</h5>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Cultural Internship - Resort Worker</h5>
                             <p class="mb-2"><strong>Squire Resort</strong> | <small>21 Feb - 2 May 2025</small></p>
                             <p>Assisted with resort operations and occasionally guided guests, ensuring smooth service and a positive atmosphere.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Software Design Teaching Assistant</h5>
                             <p class="mb-2"><strong>ESPOL</strong> | <small>Mar - Dec 2024</small></p>
                             <p>Support students in software design by teaching lessons, answering questions, and providing constructive feedback to enhance their learning.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Divulgation Leader</h5>
                             <p class="mb-2"><strong>TAWS</strong> | <small>2024</small></p>
                             <p>Managed educational content for social media, organized workshops, coordinated courses in Software and Machine Learning, and supported events to promote learning and engagement.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Cultural Intership - Park Ambassador</h5>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Cultural Internship - Park Ambassador</h5>
                             <p class="mb-2"><strong>SeaWorld</strong> | <small>Feb – May 2024</small></p>
                             <p>Engaged with international guests in English, providing information, directions, and assistance to ensure a welcoming and enjoyable park experience.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute" aria-hidden="true" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Electrical Maintenance</h5>
                             <p class="mb-2"><strong>Fisa </strong> | <small>Mar - Apr 2024</small></p>
                             <p>Performed electrical maintenance tasks, ensuring the safety and functionality of equipment and systems.</p>
@@ -434,26 +447,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Qualification End -->
 
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5" id="testimonial">
+    <section class="container-fluid py-5" id="testimonial">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
+                <h2 class="display-1 text-uppercase text-white font-weight-bolder" aria-hidden="true" style="-webkit-text-stroke: 1px #dee2e6;">Review</h2>
+                <h2 class="h1 position-absolute text-uppercase text-primary font-weight-bolder">Clients Say</h2>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="owl-carousel testimonial-carousel">
                         
                         <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4" aria-hidden="true"></i>
                             <h4 class="font-weight-light mb-4">The results were astonishing, totally worth it.</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" loading="lazy"
+                                width="80" height="80" alt="Alex Otero Limones" style="width: 80px; height: 80px;">
                             <h5 class="font-weight-bold m-0">Alex Otero</h5>
                             <span>Software Designer</span>
                         </div>
@@ -462,29 +476,29 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Testimonial End -->
 
     <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
+    <section class="container-fluid py-5" id="contact">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+                <h2 class="display-1 text-uppercase text-white font-weight-bolder" aria-hidden="true" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h2>
+                <h2 class="h1 position-absolute text-uppercase text-primary font-weight-bolder">Contact Me</h2>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-form text-center">
-                        <div id="success"></div>
+                        <div id="success" role="status" aria-live="polite"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" name="name" placeholder="Your Name"
+                                    <input type="text" class="form-control p-4" id="name" name="name" placeholder="Your Name" autocomplete="name"
                                         required="required" data-validation-required-message="Please enter your name" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" name="email" placeholder="Your Email"
+                                    <input type="email" class="form-control p-4" id="email" name="email" placeholder="Your Email" autocomplete="email"
                                         required="required" data-validation-required-message="Please enter your email" />
                                     <p class="help-block text-danger"></p>
                                 </div>
@@ -509,18 +523,22 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Contact End -->
 
 
+    </main>
+
     <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <footer class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
             <div class="d-flex justify-content-center mb-4">
-                <!-- <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a> -->
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/alex-otero-limones-768957267/"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="https://www.instagram.com/alexoterolim/"><i class="fab fa-instagram"></i></a>
+                <!-- <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> -->
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/alex-otero-limones-768957267/"
+                    target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/alexoterolim/"
+                    target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             </div>
             <!-- <div class="d-flex justify-content-center mb-3">
                 <a class="text-white" href="#">Privacy</a>
@@ -531,17 +549,17 @@
                 <span class="px-3">|</span>
                 <a class="text-white" href="#">Help</a>
             </div> -->
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">AlexOtero</a>. All Rights Reserved.
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#home">AlexOtero</a>. All Rights Reserved.
             </p>
         </div>
-    </div>
+    </footer>
     <!-- Footer End -->
 
     <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom" aria-hidden="true"></i>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <a href="#home" class="btn btn-outline-dark px-0 back-to-top" aria-label="Back to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -549,10 +567,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
     <script src="lib/typed/typed.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

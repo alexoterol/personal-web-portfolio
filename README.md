@@ -8,25 +8,50 @@ This portfolio is the perfect place to explore the projects I've worked on, the 
 
 ## Features
 - **Sleek and Responsive Design**: Built to look great on any device, from desktops to mobile.
-- **Showcase of Projects**: Featuring detailed information about the projects I've worked on, including live demos and links to repositories.
-- **About Me Section**: Get to know more about my background, my career, and my journey into web development.
-- **Contact Form**: A simple and intuitive way for you to reach out directly through the website.
-
-## Why This Portfolio?
-- **Personalized Design**: Unlike generic templates, this portfolio reflects my personal style and approach to web design.
-- **Modern Technologies**: Built using HTML, CSS, and JavaScript, with a focus on performance and usability.
-- **Professional Presentation**: Perfect for showcasing my work to future employers or clients looking for a creative and talented web developer.
+- **Showcase of Projects**: A filterable gallery linking to the repositories behind each project.
+- **About & Qualifications**: My background, education, and work experience in one place.
+- **Contact Form**: Client-side validated and delivered through EmailJS — no backend required.
 
 ## Tech Stack
-- **HTML5**: The backbone of the portfolio, ensuring semantic and accessible markup.
-- **CSS3**: Stylish and responsive design with custom animations.
-- **JavaScript**: Interactive features and dynamic content to enhance the user experience.
+- **HTML5 / CSS3**: Semantic markup and a Bootstrap 4 theme customized through Sass.
+- **JavaScript (jQuery)**: Typed.js for the hero text, Isotope for portfolio filtering, Owl Carousel for testimonials.
+- **EmailJS + SweetAlert2**: Contact form delivery and feedback.
+
+## Project Structure
+```
+index.html          Single page containing every section
+css/style.css       Compiled stylesheet loaded by the page
+scss/style.scss     Sass source for css/style.css
+js/main.js          Navigation, animations, portfolio filter, carousel
+js/app.js           Contact form validation and EmailJS delivery
+img/                Photos, project screenshots, technology logos
+lib/                Third-party front-end libraries
+```
+
+## Running Locally
+The site is fully static, but it must be served over HTTP: the Content Security Policy
+in `index.html` blocks scripts when the page is opened directly from the filesystem.
+
+```bash
+python -m http.server 5500
+```
+
+Then open http://localhost:5500.
+
+### Rebuilding the CSS
+`css/style.css` is compiled from `scss/style.scss` (which imports Bootstrap from `scss/bootstrap`).
+Edit the Sass source rather than the compiled file, then recompile:
+
+```bash
+sass scss/style.scss css/style.css
+```
 
 ## Contributing
 I'm always open to feedback, ideas, or collaborations! If you have any suggestions or would like to contribute, feel free to fork the repository, open issues, or submit pull requests.
 
-## License
-This repository is licensed under the MIT License, meaning you are free to use, modify, and distribute the content for both personal and commercial use.
+## Credits and License
+The layout started from the *FreeFolio* template by [HTML Codex](https://htmlcodex.com) (see `READ-ME.txt`).
+Usage terms are described in `LICENSE.txt`.
 
 ---
 
