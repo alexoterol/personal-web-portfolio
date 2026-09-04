@@ -55,4 +55,4 @@ Usage terms are described in `LICENSE.txt`.
 
 ---
 
-If you like what you see, feel free to connect with me through the contact form or reach out via my social media links. Let’s collaborate and build something amazing together!
+If you like what you see, feel free to connect with me through the contact form or reach out via my social media links. Let’s collaborate!
